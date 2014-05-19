@@ -1,10 +1,13 @@
-<table>
+<br>
+<br>
+
+<table width="30%">
 	<th>
-		<td>
+		<td align="center">
 		<a href='/'>Home</a>
 		</td>
 		
-		<td>
+		<td align="center">
 		<a href='/halls'>Facilities</a>
 		</td>
 	</th>
@@ -12,7 +15,7 @@
 
 <br>
 
-<h1>Listing halls</h1>
+<h2>Listing halls</h2>
 
 <table>
   <tr>
@@ -23,8 +26,6 @@
     <th>Phone</th>
     <th>Email</th>
     <th>Picture</th>
-    <th></th>
-    <th></th>
     <th></th>
   </tr>
 
@@ -38,8 +39,6 @@
     <td><%= hall.email %></td>
     <td><%= hall.poza %></td>
     <td><%= link_to 'Show', hall %></td>
-    <td><%= link_to 'Edit', edit_hall_path(hall) %></td>
-    <td><%= link_to 'Destroy', hall, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
 </table>

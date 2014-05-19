@@ -1,10 +1,13 @@
-<table>
+<br>
+<br>
+
+<table width="30%">
 	<th>
-		<td>
+		<td align="center">
 		<a href='/'>Home</a>
 		</td>
 		
-		<td>
+		<td align="center">
 		<a href='/halls'>Facilities</a>
 		</td>
 	</th>
@@ -46,12 +49,13 @@
 
 <p>
   <b>Location:</b>
-  <%= @hall.locatie %>
+  <a href='<%= @hall.locatie %>' target="_blank"><%= @hall.locatie %></a>
 </p>
 
 <p>
   <b>Image:</b>
-  <%= @hall.poza %>
+  <br>
+  <img src='<%= @hall.poza %>'/ alt="No Image">
 </p>
 
 
@@ -67,5 +71,4 @@
 
 <br>
 
-<%= link_to 'Edit', edit_hall_path(@hall) %> |
 <%= link_to 'Back', halls_path %>
