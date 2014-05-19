@@ -20,11 +20,6 @@
 </p>
 
 <p>
-  <b>Description:</b>
-  <%= @hall.descriere %>
-</p>
-
-<p>
   <b>Type:</b>
   <%= @hall.tipul %>
 </p>
@@ -55,15 +50,22 @@
 </p>
 
 <p>
-  <b>Features:</b>
-  <%= @hall.features %>
-</p>
-
-<p>
   <b>Image:</b>
   <%= @hall.poza %>
 </p>
 
+
+<p>
+  <b>Description:</b>
+  <%= @hall.descriere %>
+</p>
+
+<p>
+  <b>Features:</b>
+  <%= @hall.features %>
+</p>
+
+<br>
 
 <%= link_to 'Edit', edit_hall_path(@hall) %> |
 <%= link_to 'Back', halls_path %>
