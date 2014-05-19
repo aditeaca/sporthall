@@ -1,23 +1,25 @@
 <br>
 <br>
 
-<table width="30%">
-	<th>
-		<td align="center">
+<table width="30%" border=1>
+	<tr>
+		<td align="center" width="50%">
 		<a href='/'>Home</a>
 		</td>
 		
-		<td align="center">
+		<td align="center" width="50%">
 		<a href='/halls'>Facilities</a>
 		</td>
-	</th>
+	</tr>
 </table>
 
 <br>
 
 <h2>Listing halls</h2>
 
-<table>
+<center>
+
+<table border=1>
   <tr>
     <th>Name</th>
     <th>Type</th>
@@ -25,7 +27,6 @@
     <th>Postcode</th>
     <th>Phone</th>
     <th>Email</th>
-    <th>Picture</th>
     <th></th>
   </tr>
 
@@ -37,11 +38,12 @@
     <td><%= hall.postcode %></td>
     <td><%= hall.phone %></td>
     <td><%= hall.email %></td>
-    <td><%= hall.poza %></td>
     <td><%= link_to 'Show', hall %></td>
   </tr>
 <% end %>
 </table>
+
+</center>
 
 <br />
 
