@@ -14,6 +14,22 @@
 </table>
 
 <br>
+<br>
+
+<form action ="halls/search" method="post">
+	<input name="key" type="input" />
+	<input value="Search for halls" type="submit" />
+</form>
+
+<br>
+
+<h3>
+<% ('A'...'Z').each do |letter| -%>
+<%= link_to letter, halls_path(:starts_with => letter) %>
+<% end -%>
+</h3>
+
+<br>
 
 <h2>Listing halls</h2>
 

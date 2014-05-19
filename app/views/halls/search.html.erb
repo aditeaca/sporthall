@@ -1,0 +1,46 @@
+<html>
+
+<head>
+<title>Search results
+</title>
+</head>
+
+<body>
+<br>
+<br>
+
+<table width="30%" border=1>
+	<tr>
+		<td align="center" width="50%">
+		<a href='/'>Home</a>
+		</td>
+		
+		<td align="center" width="50%">
+		<a href='/halls'>Facilities</a>
+		</td>
+	</tr>
+</table>
+
+<br>
+
+<h2>Search results</h2>
+<center>
+<table border="1">
+<tr>
+	<td>Name</td>
+	<td>Type</td>
+	<td></td>
+</tr>
+<% @halls.each do |hall| %>
+	<tr>
+		<td><%=hall.nume%></td>
+		<td><%=hall.tipul%></td>
+		<td><%= link_to 'Show', hall %></td>
+	</tr>
+<% end %>
+</table>
+</center>
+<br>
+<p> <%= link_to 'Back', halls_path %>
+</body>
+</html>

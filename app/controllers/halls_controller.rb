@@ -2,7 +2,11 @@ class HallsController < ApplicationController
   # GET /halls
   # GET /halls.json
   def index
-    @halls = Hall.all
+	if (params[:starts_with])
+		@halls = Hall.all :conditions => ["substr(nume,1,1) LIKE ?", "%#{params[:starts_with]}%"]
+	else
+		@halls = Hall.all
+	end
 
     respond_to do |format|
       format.html # index.html.erb
@@ -84,5 +88,9 @@ class HallsController < ApplicationController
 	def import
 		Hall.import(params[:file])
 		redirect_to root_url, notice: "Data imported successfully!"
+	end
+	
+	def search
+		@halls = Hall.find(:all, :conditions => ["nume LIKE ?","%#{params[:key]}%"])
 	end
 end

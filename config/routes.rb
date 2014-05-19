@@ -1,6 +1,7 @@
 Sporthall::Application.routes.draw do
 	resources :halls do
 		collection {post :import}
+		post 'search', :on => :collection
 	end
 	root to: 'halls#home'
 
