@@ -1,0 +1,59 @@
+<table>
+	<th>
+		<td>
+		<a href='/'>Home</a>
+		</td>
+		
+		<td>
+		<a href='/halls'>Facilities</a>
+		</td>
+	</th>
+</table>
+
+<br>
+
+<h1>Listing halls</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Type</th>
+    <th>Address</th>
+    <th>Postcode</th>
+    <th>Phone</th>
+    <th>Email</th>
+    <th>Picture</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @halls.each do |hall| %>
+  <tr>
+    <td><%= hall.nume %></td>
+    <td><%= hall.tipul %></td>
+    <td><%= hall.adresa %></td>
+    <td><%= hall.postcode %></td>
+    <td><%= hall.phone %></td>
+    <td><%= hall.email %></td>
+    <td><%= hall.poza %></td>
+    <td><%= link_to 'Show', hall %></td>
+    <td><%= link_to 'Edit', edit_hall_path(hall) %></td>
+    <td><%= link_to 'Destroy', hall, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Hall', new_hall_path %>
+
+<br>
+
+<h2>Import data</h2>
+<%= form_tag import_halls_path, multipart: true do %>
+	<%= file_field_tag :file %>
+	<%= submit_tag "Import" %>
+<%end%>
+
+<br>

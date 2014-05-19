@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  nume: MyText
+  descriere: MyText
+  tipul: MyText
+  adresa: MyText
+  postcode: MyText
+  phone: MyText
+  email: MyText
+  locatie: MyText
+  features: MyText
+  poza: MyText
+
+two:
+  nume: MyText
+  descriere: MyText
+  tipul: MyText
+  adresa: MyText
+  postcode: MyText
+  phone: MyText
+  email: MyText
+  locatie: MyText
+  features: MyText
+  poza: MyText

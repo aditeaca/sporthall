@@ -1,0 +1,69 @@
+<table>
+	<th>
+		<td>
+		<a href='/'>Home</a>
+		</td>
+		
+		<td>
+		<a href='/halls'>Facilities</a>
+		</td>
+	</th>
+</table>
+
+<br>
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @hall.nume %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @hall.descriere %>
+</p>
+
+<p>
+  <b>Type:</b>
+  <%= @hall.tipul %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%= @hall.adresa %>
+</p>
+
+<p>
+  <b>Postcode:</b>
+  <%= @hall.postcode %>
+</p>
+
+<p>
+  <b>Phone:</b>
+  <%= @hall.phone %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @hall.email %>
+</p>
+
+<p>
+  <b>Location:</b>
+  <%= @hall.locatie %>
+</p>
+
+<p>
+  <b>Features:</b>
+  <%= @hall.features %>
+</p>
+
+<p>
+  <b>Image:</b>
+  <%= @hall.poza %>
+</p>
+
+
+<%= link_to 'Edit', edit_hall_path(@hall) %> |
+<%= link_to 'Back', halls_path %>

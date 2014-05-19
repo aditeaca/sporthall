@@ -1,0 +1,57 @@
+<%= form_for(@hall) do |f| %>
+  <% if @hall.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@hall.errors.count, "error") %> prohibited this hall from being saved:</h2>
+
+      <ul>
+      <% @hall.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nume %><br />
+    <%= f.text_area :nume %>
+  </div>
+  <div class="field">
+    <%= f.label :descriere %><br />
+    <%= f.text_area :descriere %>
+  </div>
+  <div class="field">
+    <%= f.label :tipul %><br />
+    <%= f.text_area :tipul %>
+  </div>
+  <div class="field">
+    <%= f.label :adresa %><br />
+    <%= f.text_area :adresa %>
+  </div>
+  <div class="field">
+    <%= f.label :postcode %><br />
+    <%= f.text_area :postcode %>
+  </div>
+  <div class="field">
+    <%= f.label :phone %><br />
+    <%= f.text_area :phone %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.text_area :email %>
+  </div>
+  <div class="field">
+    <%= f.label :locatie %><br />
+    <%= f.text_area :locatie %>
+  </div>
+  <div class="field">
+    <%= f.label :features %><br />
+    <%= f.text_area :features %>
+  </div>
+  <div class="field">
+    <%= f.label :poza %><br />
+    <%= f.text_area :poza %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
