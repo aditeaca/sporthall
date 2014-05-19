@@ -24,7 +24,7 @@
 <br>
 
 <h3>
-<% ('A'...'Z').each do |letter| -%>
+<% ('A'..'Z').each do |letter| -%>
 <%= link_to letter, halls_path(:starts_with => letter) %>
 <% end -%>
 </h3>
